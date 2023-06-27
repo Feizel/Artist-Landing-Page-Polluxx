@@ -1,0 +1,166 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@200;0,500;0,600");
+@import url("https://fontest.com/night-font");
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+#main {
+  width: 100%;
+  min-height: 100vh;
+  /* background: #feac00; */
+  background-image: url("/images/IMG_20230615_111539_161.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-box {
+  background: white;
+  width: 80%;
+  min-height: 80vh;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.1)
+  );
+  border-radius: 50px;
+  z-index: 4;
+  backdrop-filter: blur(2rem);
+}
+
+.circle1,
+.circle2 {
+  background: white;
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  position: absolute;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.4)
+  );
+  z-index: 2;
+}
+
+.circle1 {
+  top: 4%;
+  right: 2%;
+}
+
+.circle2 {
+  bottom: 4%;
+  left: 2%;
+}
+
+.main-box nav {
+  padding: 50px;
+}
+
+.main-box nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.bx {
+  font-size: 1.6rem;
+  color: #fff;
+  padding: 6px;
+  border-radius: 0.5rem;
+  background: #000;
+  cursor: pointer;
+}
+
+.bx:hover {
+  color: #000;
+  background: #fff;
+  transition: 0.3s ease;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.main-text {
+  max-width: 500px;
+  padding: -10px 45px;
+}
+
+.main-text h1 {
+  font-size: 2.5rem;
+}
+
+.main-text h2 {
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+.main-text p {
+  font-size: 1rem;
+  font-weight: 100;
+  margin: 18px 0 40px;
+}
+
+.btn1,
+.btn2 {
+  padding: 10px 20px;
+  background: #d41b27;
+  color: #fff;
+  font-weight: 300;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.btn1:hover {
+  background: #fff;
+  color: #000;
+  transition: 0.5s ease;
+}
+.btn2 {
+  background: #fff;
+  color: #000;
+  margin-left: 1rem;
+}
+
+.btn2:hover {
+  background: #d41b27;
+  color: #fff;
+  transition: 0.5s ease;
+}
+
+.main-text::after {
+  content: "";
+  width: 5px;
+  height: 20%;
+  background: #d41b27;
+  position: absolute;
+  left: 2.4rem;
+  top: 11.1rem;
+}
+
+.main-img {
+  width: 350px;
+  height: 350px;
+}
+
+.main-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  z-index: 999;
+}
