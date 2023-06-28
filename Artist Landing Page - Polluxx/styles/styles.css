@@ -36,12 +36,15 @@ html {
   margin: 0;
   color: #eee;
 }
+body {
+  background-image: url("/images/IMG_20230615_111539_161.png");
+}
 
 #main {
   width: 100%;
   min-height: 100vh;
   /* background: #feac00; */
-  background-image: url("/images/IMG_20230615_111539_161.png");
+  /* background-image: url("/images/IMG_20230615_111539_161.png"); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,6 +126,7 @@ html {
 
 .main-content {
   display: flex;
+
   justify-content: space-between;
   padding: 0rem 3rem;
 }
@@ -150,6 +154,7 @@ html {
 }
 .buttons-container {
   margin: 2rem 0;
+
 }
 .main-text h1 {
   font-size: 5rem;
@@ -157,6 +162,7 @@ html {
   width: 100%;
   text-align: left;
   letter-spacing: 28px;
+
 }
 
 .main-text h2 {
@@ -228,7 +234,36 @@ html {
   object-fit: contain;
   object-position: center;
   z-index: 999;
+  position: relative;
 }
+
+sup {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#charts {
+  width: 100%;
+  min-height: 100%;
+  padding-top: 40px;
+  /* background: #feac00; */
+  /* background-image: url("/images/IMG_20230615_111539_161.png"); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.charts {
+  /* position: relative; */
+  width: 30%;
+  min-height: 80vh;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  backdrop-filter: blur(275px);
+}
+
 
 .socials {
   display: flex;
@@ -439,4 +474,47 @@ button {
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
+}
+=======
+.charts h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.charts .list {
+  position: relative;
+  display: flex;
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+  scale: 0.9;
+}
+
+.charts .list:hover {
+  background: #696868;
+  box-shadow: -15px 30px 50px rgba(0, 0, 0, 0.5);
+  scale: 1;
+}
+
+.charts .icons {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.charts .icons i {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.chart .list .content .rank {
+  position: absolute;
+  right: 20px;
 }
