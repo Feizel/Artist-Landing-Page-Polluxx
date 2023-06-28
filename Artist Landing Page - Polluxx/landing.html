@@ -33,21 +33,31 @@
         <div class="main-content">
           <!-- Main Text -->
           <div class="main-text">
-            <h1>POLLUXX <br /><em>the artist</em></h1>
-            <h2>Road to 626: The SAGA begins <br />Get the latest updates</h2>
-            <p>
-              Stay tuned to <strong><em>Polluxx</em></strong
-              >, Jozi's latest trendy rapper.
-            </p>
-            <!-- Buttons -->
-            <a href="#" class="btn1">Book</a>
-            <a href="#" class="btn2">Contact</a>
+            <div class="artist-name">
+              <h1>POLLUXX</h1>
+
+              <h2>the artist</h2>
+            </div>
+              <div class="road">
+
+                <h3>Road to 626: The SAGA begins <br />Get the latest updates</h3>
+                <p>
+                  Stay tuned to <strong><em>Polluxx</em></strong
+                    >, Jozi's latest trendy rapper.
+                  </p>
+                  <!-- Buttons -->
+                  <a href="#" id="open" class="btn1">Book</a>
+                  <a href="#" class="btn2">Contact</a>
+                </div>
           </div>
           <!-- Socials -->
-          <div class="socials"></div>
+          <!-- <div class="socials"></div> -->
           <!-- Image -->
-          <div class="main-img">
-            <img src="/images/poll.png" alt="Polluxx Image" />
+          <div class="img-container">
+
+            <div class="main-img">
+              <img src="/images/poll.png" alt="Polluxx Image" />
+            </div>
           </div>
         </div>
       </div>
@@ -55,5 +65,49 @@
     <!-- Circles -->
     <div class="circle1"></div>
     <div class="circle2"></div>
+
+    <!-- <section id="contact-form" class="hidden">
+      <div id="close"></div>
+      <form action="" method="post">
+        <img src="./images/Polluxx Banner.png" alt="" />
+        <label for="Name">Name : <input type="text" /></label>
+        <label for="Name">surname : <input type="text" /></label>
+        <label for="Name">Event : <input type="text" /></label>
+        <label for="Name">Date : <input type="text" /></label>
+        <button>Submit</button>
+      </form>
+      <div id="my-image">
+        <div class="overlay">
+          <video
+            autoplay
+            src="./images/take-1.mp4"
+            height="70%"
+            width="100%"
+            style="margin: auto auto"
+          ></video>
+        </div>
+      </div>
+    </section> -->
+
+    <script>
+      let openButton = document.getElementById("open");
+      let closeButton = document.getElementById("close");
+      let contactForm = document.getElementById("contact-form");
+
+      closeButton.addEventListener("click", () => {
+        contactForm.classList.toggle("hidden");
+        openButton.classList.toggle("hidden");
+      });
+
+      // contactForm.addEventListener('click' , ()=>{
+      //     contactForm.classList.toggle("hidden")
+      //     openButton.classList.toggle("hidden")
+
+      // });
+
+      openButton.addEventListener("click", () => {
+        contactForm.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>

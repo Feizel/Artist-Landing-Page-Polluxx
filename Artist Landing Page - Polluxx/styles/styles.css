@@ -9,6 +9,11 @@
   text-decoration: none;
   font-family: "Poppins", sans-serif;
 }
+body , html {
+  padding: 0;
+  margin: 0;
+  color:#eee;
+}
 
 #main {
   width: 100%;
@@ -91,23 +96,50 @@
 
 .main-content {
   display: flex;
+  justify-content: space-between;
+  padding: 0rem 3rem;
+}
+.img-container{
+  width:50%;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
-  padding: 10px;
 }
-
 .main-text {
-  max-width: 500px;
-  padding: -10px 45px;
+  width:50%;
+  padding: 12px;
 }
+.main-text .artist-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border-left: 5px solid #d41b27;
+  padding: 0 1rem;
+  
+}
+.main-text div.road {
+  border-left: 5px solid transparent;
+  padding: 0 1rem;
 
+}
 .main-text h1 {
-  font-size: 2.5rem;
+  font-size: 5rem;
+  /* background-color: #d41b27; */
+  width: 100%;
+  text-align: left;
 }
 
 .main-text h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  /* background-color: yellow; */
+  text-align: end;
   font-weight: 200;
+  margin: 1rem 0;
+}
+.main-text h3 {
+  font-size: 1.5rem;
+  /* background-color: green; */
+  font-weight: 550;
 }
 
 .main-text p {
@@ -142,19 +174,22 @@
   transition: 0.5s ease;
 }
 
-.main-text::after {
+/* .main-text::after {
   content: "";
   width: 5px;
-  height: 20%;
+  height: 25%;
   background: #d41b27;
   position: absolute;
   left: 2.4rem;
-  top: 11.1rem;
-}
+  top: 10.5rem;
+} */
 
 .main-img {
-  width: 350px;
-  height: 350px;
+  width: 450px;
+  height: 450px;
+  border-radius: 60%;
+  background-color: #d41b27;
+  scale:0.9;
 }
 
 .main-img img {
@@ -163,4 +198,91 @@
   object-fit: contain;
   object-position: center;
   z-index: 999;
+  scale:1.2;
+  transform: translate(0,-35px);
 }
+
+
+
+section.hidden{
+  display:none !important;
+}
+form{
+  width:40%;
+  height: 70vh;
+  /* background-color: #000; */
+  background: white;
+  /* width: 80%; */
+  min-height: 80vh;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.1)
+  );
+  color:#eee;
+  display:flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-evenly;
+  padding: 2.5rem;
+  margin: auto auto;
+  border-radius: 32px 0 0 32px;
+  z-index: 100000;
+
+}
+#contact-form{
+  display: flex;
+  padding: 0 10rem;
+  height: 100vh;
+  /* background-color: rgba(1,1,1,1); */
+  background-color: #000;
+  position: absolute;
+  top: 0;
+}
+label{
+  display: block;
+  padding:1rem;
+}
+input[type="text"]:focused{
+  border:none
+}
+input[type="text"]{
+  border: none;
+  padding:.5rem ;
+  /* border-radius: 2.5rem; */
+  border-bottom: 2px solid grey;
+  background-color: transparent;
+  width:100%;
+  color:#eee;
+
+}
+button{
+  padding:.75rem 3.5em;
+  margin:0 auto;
+  cursor:pointer
+}
+#my-image{
+  background-image: url("images/polluxx.jpg");
+  background-size: contain;
+  background-position: center;
+  height: 80vh;
+  width:100%;
+  margin: auto auto;
+  border-radius: 0 32px  32px 0;
+  z-index: 100000;
+  
+}
+.overlay{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1,1,1,.7);
+  border-radius: 0 32px  32px 0;
+
+}#close{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 70px ;
+  height: 70px ;
+  background-color: blue;
+  }
