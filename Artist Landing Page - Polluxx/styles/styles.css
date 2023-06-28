@@ -1,18 +1,40 @@
 /* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@200;0,500;0,600");
-@import url("https://fontest.com/night-font");
-
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@200;0,500;0,600"); */
+/* @import url("https://fontest.com/night-font"); */
+@import url("https://fonts.googleapis.com/css2?family=Caprasimo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@500&display=swap");
 * {
   padding: 0;
   margin: 0;
   list-style: none;
   text-decoration: none;
-  font-family: "Poppins", sans-serif;
+  font-family: "Jura", sans-serif;
+  /* filter:invert(1) */
 }
-body , html {
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #444;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #222;
+}
+body,
+html {
   padding: 0;
   margin: 0;
-  color:#eee;
+  color: #eee;
 }
 
 #main {
@@ -28,7 +50,7 @@ body , html {
 .main-box {
   background: white;
   width: 80%;
-  min-height: 80vh;
+  min-height: 90vh;
   background: linear-gradient(
     to right bottom,
     rgba(255, 255, 255, 0.5),
@@ -65,7 +87,7 @@ body , html {
 }
 
 .main-box nav {
-  padding: 50px;
+  padding: 30px 50px;
 }
 
 .main-box nav ul {
@@ -77,6 +99,11 @@ body , html {
   color: #000;
   font-size: 1.6rem;
   font-weight: 800;
+  width: 250px;
+  height: 80px;
+  /* background-color: #000; */
+  background-image: url("./../images/Polluxx_Banner-trans.png");
+  background-size: contain;
 }
 
 .bx {
@@ -99,14 +126,14 @@ body , html {
   justify-content: space-between;
   padding: 0rem 3rem;
 }
-.img-container{
-  width:50%;
+.img-container {
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .main-text {
-  width:50%;
+  width: 50%;
   padding: 12px;
 }
 .main-text .artist-name {
@@ -115,18 +142,21 @@ body , html {
   align-items: flex-end;
   border-left: 5px solid #d41b27;
   padding: 0 1rem;
-  
 }
 .main-text div.road {
   border-left: 5px solid transparent;
   padding: 0 1rem;
-
+  /* color:#000; */
+}
+.buttons-container {
+  margin: 2rem 0;
 }
 .main-text h1 {
   font-size: 5rem;
-  /* background-color: #d41b27; */
+  font-family: "Caprasimo", cursive;
   width: 100%;
   text-align: left;
+  letter-spacing: 28px;
 }
 
 .main-text h2 {
@@ -139,7 +169,7 @@ body , html {
 .main-text h3 {
   font-size: 1.5rem;
   /* background-color: green; */
-  font-weight: 550;
+  font-weight: 600;
 }
 
 .main-text p {
@@ -189,7 +219,7 @@ body , html {
   height: 450px;
   border-radius: 60%;
   background-color: #d41b27;
-  scale:0.9;
+  scale: 0.9;
 }
 
 .main-img img {
@@ -198,91 +228,215 @@ body , html {
   object-fit: contain;
   object-position: center;
   z-index: 999;
-  scale:1.2;
-  transform: translate(0,-35px);
 }
 
-
-
-section.hidden{
-  display:none !important;
+.socials {
+  display: flex;
+  width: 50%;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
 }
-form{
-  width:40%;
-  height: 70vh;
-  /* background-color: #000; */
-  background: white;
-  /* width: 80%; */
-  min-height: 80vh;
-  background: linear-gradient(
+.socials div {
+  width: 75px;
+}
+
+section.hidden {
+  display: none !important;
+}
+form {
+  width: 40%;
+  height: 80vh;
+  background: #d41b27;
+  overflow-y: auto;
+  /* min-height: 80vh; */
+  /* background: linear-gradient(
     to right bottom,
     rgba(255, 255, 255, 0.5),
     rgba(255, 255, 255, 0.1)
-  );
-  color:#eee;
-  display:flex;
+  ); */
+  position: relative;
+  color: #eee;
+  display: flex;
   flex-direction: column;
   /* align-items: center; */
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   padding: 2.5rem;
   margin: auto auto;
   border-radius: 32px 0 0 32px;
   z-index: 100000;
-
 }
-#contact-form{
+#contact-form {
   display: flex;
-  padding: 0 10rem;
+  width: 100%;
+
   height: 100vh;
-  /* background-color: rgba(1,1,1,1); */
-  background-color: #000;
+  background: rgba(1, 1, 1, 0.7);
+  /* background-color: #000; */
   position: absolute;
   top: 0;
+  z-index: 9999;
 }
-label{
+label {
   display: block;
-  padding:1rem;
+  padding: 1rem;
 }
-input[type="text"]:focused{
-  border:none
+input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: blue
 }
-input[type="text"]{
+
+input[type="text"]:focused {
   border: none;
-  padding:.5rem ;
+}
+input[type="text"] , input[type="datetime-local"] {
+  border: none;
+  padding: 0.5rem;
   /* border-radius: 2.5rem; */
   border-bottom: 2px solid grey;
   background-color: transparent;
-  width:100%;
-  color:#eee;
-
+  width: 100%;
+  color: #eee;
 }
-button{
-  padding:.75rem 3.5em;
-  margin:0 auto;
-  cursor:pointer
+button {
+  padding: 0.75rem 3.5em;
+  margin: 0 auto;
+  cursor: pointer;
 }
-#my-image{
+#my-image {
   background-image: url("images/polluxx.jpg");
   background-size: contain;
   background-position: center;
   height: 80vh;
-  width:100%;
+  width: 100%;
   margin: auto auto;
-  border-radius: 0 32px  32px 0;
+  border-radius: 0 32px 32px 0;
   z-index: 100000;
-  
 }
-.overlay{
+.overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(1,1,1,.7);
-  border-radius: 0 32px  32px 0;
+  background-color: rgba(1, 1, 1, 0.7);
+  border-radius: 0 32px 32px 0;
+}
+#close {
+  position: absolute;
+  top: 21px;
+  right: 21px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: blue; */
+}
 
-}#close{
-  position: fixed;
-  top:0;
-  left:0;
-  width: 70px ;
-  height: 70px ;
-  background-color: blue;
+@media only screen and (max-width: 900px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
   }
+  .main-text {
+    width: 100%;
+  }
+  .main-text h1 {
+    font-size: 4rem;
+    letter-spacing: 28px;
+  }
+  .img-container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .main-text h1 {
+    font-size: 3rem;
+    letter-spacing: 8px;
+  }
+}
+
+.heartbeat {
+  -webkit-animation: heartbeat 6s ease-in-out infinite both;
+  animation: heartbeat 6s ease-in-out infinite both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2023-6-28 13:17:1
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation heartbeat
+ * ----------------------------------------
+ */
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
