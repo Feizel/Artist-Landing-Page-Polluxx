@@ -20,35 +20,93 @@
         <!-- Navbar -->
         <nav>
           <ul>
-            <li><a href="#" class="logo">Polluxx</a></li>
+            <li><div class="logo"></div></li>
             <!-- <li><a href="#">Home</a></li>
             <li><a href="#">Socials</a></li>
             <li><a href="#">Book</a></li> -->
+           <div style="display:flex">
+            <!-- <li>
+              <a href="#"><i class='bx bxs-home' style='color:#ffffff' ></i></a>
+            </li> -->
             <li>
-              <a href="#"><i class="bx bxs-microphone"></i></a>
+              <a href="#"><i title="Music Catalog / Discography" class='bx bxs-music' style='color:#ffffff' ></i></a>
             </li>
+
+           </div>
+            
           </ul>
         </nav>
         <!-- Main Content -->
         <div class="main-content">
           <!-- Main Text -->
           <div class="main-text">
-            <h1>POLLUXX</h1>
-            <sup><em>the artist</em></sup>
-            <h2>Road to 626: The SAGA begins <br />Get the latest updates</h2>
-            <p>
-              Stay tuned to <strong><em>Polluxx</em></strong
-              >, Jozi's latest trendy rapper.
-            </p>
-            <!-- Buttons -->
-            <a href="#" class="btn1">Book</a>
-            <a href="#" class="btn2">Contact</a>
+
+            <div class="artist-name">
+              <h1>POLLUXX</h1>
+
+              <h2>the artist</h2>
+            </div>
+            <div class="road">
+              <h3>Road to 626: The SAGA begins <br />Get the latest updates</h3>
+              <p style="margin:12px 0" >
+                Stay tuned to
+                <strong
+                  ><a href=""
+                    ><em style="font-size: 1.2rem; color: #eee">POLLUXX</em></a
+                  ></strong
+                >, Jozi's latest trendy rapper.
+                <br>
+              </p>
+
+              <p style="margin:12px 0" >
+                Click below to hear his latest single.
+
+              </p>
+              <audio controls src="./song/song-1.mp3">
+                <source src="./song/song-1.mp3" type="mp3" />
+              </audio>
+              <br />
+
+              <!-- Buttons -->
+              <div class="buttons-container">
+                <a href="#" id="open" class="btn1">Book</a>
+                <a href="#" class="btn2">Contact</a>
+              </div>
+              <div class="socials">
+                <div>
+                  <i
+                    class="bx bxl-instagram-alt bx-flip-horizontal"
+                    style="background: rgba(1, 1, 1, 0.3); color: #eee"
+                  ></i>
+                </div>
+                <div>
+                  <i
+                    style="background: rgba(1, 1, 1, 0.3); color: #eee"
+                    class="bx bxl-youtube"
+                  ></i>
+                </div>
+                <div>
+                  <i
+                    style="background: rgba(1, 1, 1, 0.3); color: #eee"
+                    class="bx bxs-envelope"
+                    style="color: #ffffff"
+                  ></i>
+                </div>
+                <!-- <div></div>
+                    <div></div> -->
+              </div>
+            </div>
+
           </div>
           <!-- Socials -->
-          <div class="socials"></div>
-          <!-- Image -->
-          <div class="main-img">
-            <img src="/images/poll.png" alt="Polluxx Image" />
+          <div class="img-container">
+            <div class="main-img">
+              <img
+                src="/images/poll.png"
+                class="heartbeat"
+                alt="Polluxx Image"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -56,6 +114,47 @@
     <!-- Circles -->
     <div class="circle1"></div>
     <div class="circle2"></div>
+
+
+    <section id="contact-form" class="hidden">
+      <form action="https://formspree.io/f/xoqoanvr" method="post">
+        <div id="close">
+          <i class="bx bx-collapse" style="color: #ffffff"></i>
+        </div>
+        <img src="./images/Polluxx_Banner-trans.png" height="150px" alt="" />
+        <label for="Name">Name : <input name="Name" type="text" /></label>
+        <label for="Name">Email : <input name="Email" type="text" /></label>
+        <label for="Name">Tel : <input name="Tel" type="text" /></label>
+        <label for="Name">Event : <input name="Event" type="text" /></label>
+        <label for="Name"
+          >Location : <input name="Location" type="text"
+        /></label>
+        <label for="Name"
+          >Date : <input name="Date" type="datetime-local"
+        /></label>
+
+        <div style="width: auto; display: flex; justify-content: flex-end">
+          <a href="#" id="open" class="btn1">Cancel</a>
+          <button href="#" id="open" class="btn2">Book</button>
+        </div>
+      </form>
+    </section>
+
+    <script>
+      let openButton = document.getElementById("open");
+      let closeButton = document.getElementById("close");
+      let contactForm = document.getElementById("contact-form");
+
+      closeButton.addEventListener("click", () => {
+        contactForm.classList.toggle("hidden");
+        openButton.classList.toggle("hidden");
+      });
+
+      openButton.addEventListener("click", () => {
+        contactForm.classList.toggle("hidden");
+      });
+    </script>
+
     <br />
     <hr />
     <!-- <h1 class="Merch">EXPLORE</h1> -->
@@ -110,5 +209,6 @@
         </div>
       </div>
     </section>
+
   </body>
 </html>
